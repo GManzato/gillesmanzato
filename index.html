@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+
+  <!-- www.phpied.com/conditional-comments-block-downloads/ -->
+  <!--[if IE]><![endif]-->
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Gilles Manzato - Webdesigner / Frontend Dev</title>
+  <meta name="description" content="">
+  <meta name="author" content="Gilles Manzato">
+
+  <!--  Mobile Viewport Fix
+        j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+  device-width : Occupy full width of the screen in its current orientation
+  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+  -->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/style.css?v=1">
+
+  <!-- For the less-enabled mobile browsers like Opera Mini -->
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">
+
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/modernizr-1.5.min.js"></script>
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-11656904-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</head>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+  <div id="container">
+    <header>
+		<h1>Hello !</h1>
+    </header>
+    <nav id="main">
+		<ul>
+			<li><a href="#container">Top</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+           <!-- <li><a href="#work">Work</a></li>-->
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#social">Social</a></li>
+		</ul>
+	
+	</nav>
+    <div id="main">
+		<section id="about">
+			<img src="http://0.gravatar.com/avatar/204b846571524f5b4e2195fac35cb1fc?size=150" />
+			<h3>Je m'appelle Gilles Manzato.</h3>
+			<p>Je suis actuellement Front-End Developer chez <a href="http://www.dcf-services.com">Digital Commerce Factory</a>,<br />
+			Spécialisé dans l'<a href="http://www.w3.org/html/logo/index.html">HTML5</a>, <a href="">CSS3</a> et <a href="http://www.jquery.com">jQuery</a>,<br />
+			Je développe des sites sous <a href="http://www.magentocommerce.com/">Magento</a>, <a href="http://www.wordpress.org/">Wordpress</a>
+			</p>
+			<p>Ancien intégrateur chez <a href="http://www.vente-privee.com">vente-privee.com</a></p>
+			<p>Toujours en veille en terme de nouvelles technologies web, j'apprend le <a href="http://rubyonrails.org/">Ruby on Rails</a></p>
+		</section>
+		<section id="skills"class="step1">
+            <h2>Skills</h2>
+            <nav class="slist"></nav>
+            <div class="skillsContainer">
+                <div class="skill">
+                    <span class="skillName">Javascript</span>
+                    <div class="skillContainer">
+                        <div class="skillContent"></div>
+                    </div>
+                </div>
+            </div>
+		</section>
+	<!--	<section id="twitter">
+			<h2>Twitter</h2>
+		</section>
+		<section id="work">
+			<h2>Work</h2>
+		</section>-->
+        <section id="contact">
+			<h2>Contact</h2>
+            <div class="position">
+                <div class="adress">
+                    Gilles Manzato<br />
+                    Paris<br />
+                    France<br />
+                </div>
+                <div>
+                    <img src="img/france.png" />
+                </div>
+            </div>
+            <div class="form">
+            	<form>
+                	<p><label for="name">Name : </label><input id="name" name="name" type="text" autocomplete="on"  /></p>
+                	<p><label for="email">Email : </label><input name="email" type="email" autocomplete="on" formnovalidate /></p>
+                    <p><label for="message">Message : </label><textarea name="message" required></textarea></p>
+                    <p class="visuallyhidden"><label for='url'><input type="text" name="url" id="url" formnovalidate /></label>
+                    <p class="inputRight"><input type="submit" value="Send" /></p>
+                </form>
+                <div id="response"></div>
+            </div>
+		</section>
+    </div>
+    
+
+  </div> <!--! end of #container -->
+    <footer>
+    	<div id="social" class="container">
+        	<h2>Social</h2>
+            <div class="socialLast">
+            	<div class="wrapperSocial">
+                	<p>Last Tweet</p>
+                    <div id="lastTweet"></div>
+                </div>
+            	<div class="wrapperSocial">
+                	<p>Last Pics</p>
+                	<div id="lastPict"></div>
+                </div>
+            </div>
+			<div class="clearfix"></div>
+            <div class="socialLink"><a href="http://twitter.com/gillesm">Twitter</a> <a href="http://lebelge.tumblr.com/">Tumblr</a> <a href="http://www.viadeo.com/fr/profile/gilles.manzato">Viadeo</a> <a href="http://vimeo.com/gillesm">Vimeo</a></div>
+            
+        </div>
+        
+        
+    </footer>
+
+  <!-- Javascript at the bottom for fast page loading -->
+
+  <script src="js/jquery-1.4.2.min.js"></script>
+  <script src='js/jquery.scrollTo-min.js'></script> 
+  <script src='js/jquery.localscroll-min.js'></script> 
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/plugins.js?v=1"></script>
+  <script src="js/script.js?v=1"></script>
+
+  <!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js?v=1"></script>
+  <![endif]-->
+  
+</body>
+</html>
