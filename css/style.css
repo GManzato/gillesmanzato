@@ -248,8 +248,13 @@ header aside ul li a{
 	display: inline-block;
 	text-indent: -999em;
 	margin-right: 0.1em;
-	background-image: url(../img/sprite.png);
-	
+	background-image: url(../img/sprite.png);	
+}
+.lt-ie7 header hgroup,
+.lt-ie7 header hgroup,
+.lt-ie7 header nav.main ,
+.lt-ie7 header aside {
+	display: inline;
 }
 
 li.fb a{
