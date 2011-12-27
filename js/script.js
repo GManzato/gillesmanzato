@@ -17,14 +17,21 @@ $(function(){
 */
 	$.localScroll();
 	
+	$.getJSON('http://blog.gillesmanzato.com/api/read/json?num=1&callback=?', function(data) {
+		var posts = data.posts[0];
+		var img = '<a href="'+posts.url+'"><img src="'+posts["photo-url-500"]+'" /></a>';
+		$('#lastPict').html(img);
+	});
+	
+	
 	$.getJSON('http://twitter.com/statuses/user_timeline/gillesm.json?callback=?', function(data) {
 				var html = "<b><a href='http://twitter.com/gillesm/status/" + data[0].id_str + "'>" + relative_time(data[0].created_at) + "</a></b> " + linkify(data[0].text);
 				$("#lastTweet").html(html);
 			});
 
-	twitpic.users.show({'username':'gillesm','page':'1'}, function(user) {
+	/*twitpic.users.show({'username':'gillesm','page':'1'}, function(user) {
 		$('#lastPict').html('<img src="'+'http://twitpic.com/show/thumb/'+user.images[0].short_id+'" />');
-	});
+	});*/
 });
 
 

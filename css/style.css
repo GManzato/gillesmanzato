@@ -112,9 +112,8 @@ body {
 }
 .small {
   /* 13px / 18px */
-
-  font-size: 0.8125em;
-  line-height: 1.3846153846153846em;
+  font-size: 0.625em;
+  letter-spacing: 0;
 }
 .normal, h3 {
   /* 16px / 24px */
@@ -352,6 +351,7 @@ figure img{
 	margin-top: 20px;
 	color: #FFFFF7;
 	text-shadow: none;
+	padding-bottom: 1.5em;
 }
 footer h2{
 	color: #dd4124;
@@ -424,6 +424,12 @@ footer h2{
 		display: inline-block;
 		vertical-align: top;
 	}
+	.col2 {
+		margin-top: -5em;
+	}
+	.col2 figure img {
+		margin: 0;
+	}
 	#skills .resume{
 		margin-left: 10%;
 	}
@@ -434,6 +440,9 @@ footer h2{
 		width: 120px;
 	}
 	.vcard span{
+		text-align: left;
+	}
+	#social p {
 		text-align: left;
 	}
 }
