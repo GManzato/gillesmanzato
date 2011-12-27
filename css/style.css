@@ -8,7 +8,7 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { margin: 0; line-height: 1.231; }
+body { margin: 0; line-height: 1.231; font-size: 100% ;}
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 ::-moz-selection { background: #dd4124; color: #fff; text-shadow: none; }
@@ -143,13 +143,13 @@ h2 {
   /* 68px / 72px */
 
   font-size: 6em;
-  line-height: 1.0588235294117647em;
+  line-height: 1em;
 }
 .gigantic {
   /* 110px / 120px */
 
   font-size: 7.5em;
-  line-height: 1.0909090909090908em;
+  line-height: 1em;
 }
 /*
 *
@@ -163,7 +163,7 @@ header, #twoway ,#content ,footer {
   margin: 0 5.555555555555555%;
 }
 h1, h2 {
-  margin: 0.5em 0 0;
+  margin: 0 0 0;
 }
 h2 {
   font-weight: normal;
@@ -203,9 +203,13 @@ body{
 	letter-spacing: -0.05em;
 	color: #444444;
 	background: #f5f5f5 url('../img/bg-all.png') left top;
+	text-shadow: 0 0.0625em 0 #ffffff, 0 0 0.13em rgba(68, 68, 68, 0.41);
 }
 #container {
 	padding-top:3em;
+}
+p {
+	text-align: justify;
 }
 #wrapperHeader {
 	position: absolute;
@@ -215,6 +219,11 @@ body{
 	color: #fffff7;
 	z-index: 10;
 	padding-bottom: 1.5em;
+	text-shadow: none;
+	text-align: center;
+}
+header{
+	font-size: 0.75em;
 }
 header hgroup{
 	display: inline-block;
@@ -228,7 +237,7 @@ header nav.main {
 header nav ul li{
 	display: inline-block;
 }
-header nav ul li a,header nav ul li a:visited{
+header h1 a,header nav ul li a,header nav ul li a:visited{
 	color: #FFFFF7;
 }
 header aside{
@@ -263,6 +272,9 @@ li.lkin a{
 li.viadeo a {
 	background-position: 0 -96px;
 }
+section {
+	padding-top:4em;
+}
 section h1 {
 	font-family: BallparkWeiner, Georgia, "Times New Roman", Times, serif;
 	font-weight: 400;
@@ -273,12 +285,10 @@ section h1 {
 section#about h1 {
 	color: #dd4124;
 }
-section#about figure img{
+figure img{
 	margin: 0 auto;
 }
-section#about p {
-	font-size: 1.5em;
-}
+
 #skills article section h2{
 	width: 100%;
 	text-align: center;
@@ -295,6 +305,7 @@ section#about p {
 	padding: 0.125em 0.25em;
 	margin: 0.125em 0 ;
 	letter-spacing: normal;
+	text-shadow: none;
 }
 #skills ul li.four{
 	width: 80%;
@@ -329,6 +340,7 @@ section#about p {
 }
 .vcard span{
 	display: block;
+	text-align: center;
 }
 .vcard .fn {
 	font-size: 2em;
@@ -339,6 +351,7 @@ section#about p {
 	padding-top: 10px;
 	margin-top: 20px;
 	color: #FFFFF7;
+	text-shadow: none;
 }
 footer h1{
 	margin-top: 0.3em;
@@ -359,6 +372,8 @@ footer h2{
 	}
 	#wrapperHeader{
 		position: fixed;	
+		text-align: left;
+		
 	}
 	header{
 		font-size: 0.75em;
@@ -385,8 +400,11 @@ footer h2{
 	#about figure {
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 4em;
 		width: 200px;
+	}
+	section#about p {
+		font-size: 1.5em;
 	}
 	#skills article section {
 		display: inline-block;
@@ -418,7 +436,9 @@ footer h2{
 		left: 290px;
 		width: 120px;
 	}
-	
+	.vcard span{
+		text-align: left;
+	}
 }
 
 @media only screen and (min-width: 1152px) {
