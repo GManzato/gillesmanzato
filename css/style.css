@@ -243,12 +243,12 @@ header aside ul li a{
 	margin-right: 0.1em;
 	background-image: url(../img/sprite.png);	
 }
-.lt-ie7 header hgroup,
-.lt-ie7 header hgroup,
-.lt-ie7 header nav.main ,
-.lt-ie7 header nav ul li,
-.lt-ie7 header aside {
-	display: inline!important;
+.lt-ie8 header hgroup,
+.lt-ie8 header hgroup,
+.lt-ie8 header nav.main ,
+.lt-ie8 header nav ul li,
+.lt-ie8 header aside {
+	display: inline;
 }
 
 li.fb a{
