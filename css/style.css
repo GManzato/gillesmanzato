@@ -237,9 +237,10 @@ header nav.main {
 header nav ul li{
 	display: inline-block;
 }
-header h1 a,header nav ul li a,header nav ul li a:visited{
+header h1 a,header h1 a:visited,header nav ul li a,header nav ul li a:visited{
 	color: #FFFFF7;
 }
+
 header aside{
 	width: 150px;
 	display: inline-block;
@@ -348,13 +349,9 @@ figure img{
 }
 #wrapperFooter {
 	background: url(../img/bg.png) repeat-x left top transparent;
-	padding-top: 10px;
 	margin-top: 20px;
 	color: #FFFFF7;
 	text-shadow: none;
-}
-footer h1{
-	margin-top: 0.3em;
 }
 footer h2{
 	color: #dd4124;
@@ -420,7 +417,7 @@ footer h2{
 	#contact figure {
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 5em;
 	}
 	.col1,.col2 {
 		width: 49%;
