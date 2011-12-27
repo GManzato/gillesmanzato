@@ -377,9 +377,6 @@ footer h2{
 	header .navigation{
 		display: inline-block;
 	}
-	header .navigation nav.main li{
-		display: inline-box;
-	}
 	header aside nav{
 		position: absolute;
 		right: 0;
