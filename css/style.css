@@ -190,7 +190,7 @@ h3 {
 *  http://jonikorpi.com/leaving-old-IE-behind/
 *
 */
-.oldie body {
+.oldie header , .oldie footer , .oldie #content {
   width: 40em;
   margin: 0 auto;
   font-size: 1.0625em;
@@ -268,6 +268,8 @@ section h1 {
 	font-family: BallparkWeiner, Georgia, "Times New Roman", Times, serif;
 	font-weight: 400;
 	text-align: center;
+	letter-spacing: 0;
+
 }
 section#about h1 {
 	color: #dd4124;
