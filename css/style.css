@@ -198,7 +198,6 @@ h3 {
 .oldie h1 {
   /* 42px / 48px */
 
-  font-size: 2.625em;
   line-height: 1.1428571428571428em;
   margin: 1.1428571428571428em 0 0.5714285714285714em;
 }
@@ -253,6 +252,7 @@ header aside ul li a{
 .lt-ie7 header hgroup,
 .lt-ie7 header hgroup,
 .lt-ie7 header nav.main ,
+.lt-ie7 header nav ul li,
 .lt-ie7 header aside {
 	display: inline;
 }
