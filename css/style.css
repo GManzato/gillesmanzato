@@ -98,6 +98,10 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
+
+iframe {
+	width: 100%!important;
+}
 /*
 *
 *	Zoomable baseline grid

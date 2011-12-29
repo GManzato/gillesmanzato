@@ -1,37 +1,30 @@
 /* Author: 
-
+	Gilles Manzato
 */
 
 
 
 $(function(){
-	
-	 /*$('#container nav').localScroll({hash:true,});
-	
-	 $(window).scroll(function () { 
-	 	if(offset.top < bodyEl.scrollTop()+20)
-		 	$('#container nav#main').css('top',bodyEl.scrollTop()+20);
-		else 
-			$('#container nav#main').css('top',offset.top);
-	 });
-*/
+	// Set up local scroll plugin
 	$.localScroll();
-	
+	// Ajax for Tumblr
 	$.getJSON('http://blog.gillesmanzato.com/api/read/json?num=1&callback=?', function(data) {
 		var posts = data.posts[0];
-		var img = '<a href="'+posts.url+'"><img src="'+posts["photo-url-500"]+'" /></a>';
-		$('#lastPict').html(img);
+		if (posts.type == "video"){
+			var content = posts['video-player-500'];	
+		}
+		else {
+			console.log(data.posts[0]);
+			var content = '<a href="'+posts.url+'"><img src="'+posts["photo-url-500"]+'" /></a>';
+		}
+		$('#lastPict').html(content);
 	});
-	
-	
+	// Ajax request for twitter
 	$.getJSON('http://twitter.com/statuses/user_timeline/gillesm.json?callback=?', function(data) {
 				var html = "<b><a href='http://twitter.com/gillesm/status/" + data[0].id_str + "'>" + relative_time(data[0].created_at) + "</a></b> " + linkify(data[0].text);
 				$("#lastTweet").html(html);
 			});
 
-	/*twitpic.users.show({'username':'gillesm','page':'1'}, function(user) {
-		$('#lastPict').html('<img src="'+'http://twitpic.com/show/thumb/'+user.images[0].short_id+'" />');
-	});*/
 });
 
 
