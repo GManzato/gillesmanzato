@@ -351,8 +351,8 @@ figure img{
 	color: #dd4124;
 }
 #wrapperFooter {
+	margin-top: 3em;
 	background: url(../img/bg.png) repeat-x left top transparent;
-	margin-top: 20px;
 	color: #FFFFF7;
 	text-shadow: none;
 	padding-bottom: 1.5em;
