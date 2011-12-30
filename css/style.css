@@ -254,8 +254,38 @@ header aside ul li a{
 	display: inline-block;
 	text-indent: -999em;
 	margin-right: 0.1em;
-	background-image: url(../img/sprite.png);	
+	background-image: url(../img/sprite.png);
 }
+li.twitter a:hover{
+	background-position: -24px 0;
+}
+li.fb a{
+	background-position: 0 -24px;
+}
+li.fb a:hover{
+	background-position: -24px -24px;
+}
+li.gplus a{
+	background-position: 0 -48px;
+}
+li.gplus a:hover{
+	background-position: -24px -48px;
+}
+li.lkin a{
+	background-position: 0 -96px;
+}
+li.lkin a:hover{
+	background-position: -24px -96px;
+}
+
+li.viadeo a {
+	background-position: 0 -72px;
+}
+
+li.viadeo a:hover {
+	background-position: -24px -72px;
+}
+/* HACK INLINE-BLOCK */ 
 .lt-ie8 header hgroup,
 .lt-ie8 header hgroup,
 .lt-ie8 header nav.main ,
@@ -264,18 +294,6 @@ header aside ul li a{
 	display: inline;
 }
 
-li.fb a{
-	background-position: 0 -24px;
-}
-li.gplus a{
-	background-position: 0 -48px;
-}
-li.lkin a{
-	background-position: 0 -72px;
-}
-li.viadeo a {
-	background-position: 0 -96px;
-}
 section {
 	padding-top:4em;
 }
