@@ -13,6 +13,9 @@ $(function(){
 		if (posts.type == "video"){
 			var content = posts['video-player-500'];	
 		}
+		else if(posts.type == "link") {
+			var content = '<a class="massive" href="'+posts['link-url']+'">'+posts['link-text']+'</a>';
+		}
 		else {
 			console.log(data.posts[0]);
 			var content = '<a href="'+posts.url+'"><img src="'+posts["photo-url-500"]+'" /></a>';
