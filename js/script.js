@@ -23,7 +23,7 @@ $(function(){
 		$('#lastPict').html(content);
 	});
 	// Ajax request for twitter
-	$.getJSON('http://twitter.com/statuses/user_timeline/manzatog.json?callback=?', function(data) {
+	$.getJSON('http://twitter.com/statuses/user_timeline/gillesm.json?callback=?', function(data) {
 				var html = "<b><a href='http://twitter.com/gillesm/status/" + data[0].id_str + "'>" + relative_time(data[0].created_at) + "</a></b> " + linkify(data[0].text);
 				$("#lastTweet").html(html);
 			});
