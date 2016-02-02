@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gilles Manzato - Personal Website</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/fullpage.js/jquery.fullPage.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="loader"></div>
+    <div id="videoFade"></div>
+    <div id="video"></div>
+    <div id="fullpage">
+      <div class="section">
+        <div id="intro" class="wrapper">
+          <h1>GILLES MANZATO</h1>
+          <p>graphic designer, fullstack developer, videographer</p>
+          <p class="baseline">I’m committed to deliver well crafted, robust and perfect work.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="wrapper">
+          <h2>ABOUT ME</h2>
+          <p>31 years, born in Belgium, I have 8 years of corporate experience as a full-time front-end developer in Paris. I had the opportunity to build high-end digital productions for web pioneers such as vente-privee.com, AdopteUnMec.com and for start-ups like ContractLive. I am now a full-stack freelance developer.</p>
+          <p>Always thirsty for learning new technologies, I love setting up myself new challenges.</p>
+          <h2>SKILLS</h2>
+          <ul class="skill-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>Ember.js</li>
+            <li>AngularJS</li>
+            <li>Ionic</li>
+            <li>NodeJS</li>
+            <li>jQuery</li>
+            <li>Gulp/Grunt</li>
+            <li>Scss/Less</li>
+            <li>Sketch</li>
+            <li>Photoshop</li>
+            <li>Jira</li>
+            <li>SCRUM/Agile</li>
+            <li>Git / Github</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="wrapper">
+            <h1>CONTACT</h1>
+            <p>Have a question or want to work together ?</p>
+            <p>Get in touch with me by dropping me an e-mail at gilles.manzato@gmail.com</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/youtubeBackground/src/jQuery.YoutubeBackground.js"></script>
+    <script src="vendor/fullpage.js/jquery.fullPage.js"></script>
+    <script src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <!-- endbower -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'jcu3qkj',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

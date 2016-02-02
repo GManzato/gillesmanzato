@@ -1,0 +1,178 @@
+
+
+
+
+ /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  color: #FFF;
+  background: #000;
+  font-family: "roboto",sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  text-align: center;
+  transition: all .5s ease-in-out ;
+}
+
+#loader {
+  background: rgb(38,38,38);
+  width: 100%;
+  height: 100%;
+}
+
+.ytplayer-container:before{
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right,  rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59000000', endColorstr='#00000000',GradientType=1 );
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+h1,h2 {
+  transition: all .5s ease-in-out .3s;
+  transform: translate(-50px, 0);
+  opacity: 0;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.ready .active h1,
+.ready .active h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.baseline:before{
+  transition: all .5s ease-in-out ;
+  content:"";
+  display: block;
+  height: 20px;
+  width: 20%;
+  margin: 20px auto 0 auto;
+  border-top: 1px solid #50E3C2;
+}
+
+p{
+  margin-bottom: 40px;
+  transition: all .5s ease-in-out .3s;
+}
+.active p{
+  margin-bottom: 10px;
+}
+
+#intro {
+  transition: all .4s ease-in-out 0s;
+}
+
+#video{
+ position: relative;
+ background: transparent;
+}
+
+.skill-list li {
+  display: inline-block;
+  border: 1px solid #50E3C2;
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  margin-right:  15px;
+  transition: all .5s ease-in-out ;
+  cursor: pointer;
+
+}
+.skill-list li:hover {
+  background: #50E3C2;
+}
+
+.ytplayer-container{
+ position: absolute;
+ top: 0;
+ z-index: -1;
+}
+#fullpage .section .wrapper {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+@media (min-width: 800px) {
+  body {
+    text-align: left;
+  }
+  #fullpage .section .wrapper {
+    margin-left: 2%;
+    width: 40%;
+  }
+  .baseline:before{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+}
