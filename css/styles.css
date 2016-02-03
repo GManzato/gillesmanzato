@@ -109,6 +109,7 @@ h1,h2 {
   font-size: 2.5em;
   font-weight: 500;
   margin-bottom: 80px;
+  color: #50E3C2;
 }
 
 h2 {
@@ -120,6 +121,11 @@ h2 {
 .ready .active h2 {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+strong {
+  font-weight: 500;
+  color: #50E3C2;
 }
 
 .baseline:before{
