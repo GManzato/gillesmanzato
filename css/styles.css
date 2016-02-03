@@ -65,12 +65,16 @@ body {
 }
 
 #loader {
+  transition: all .5s ease-in-out ;
   background: #50E3C2;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 100;
   top: 0;
+}
+#loader.hide {
+  top:-101%;
 }
 #loader .text {
   position: absolute;

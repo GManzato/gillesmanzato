@@ -50,7 +50,7 @@ $(function(){
   }
 
   function isReady(){
-    $('#loader').fadeOut();
+    $('#loader').addClass('hide');
     $('#fullpage').addClass('ready');
 
   }
