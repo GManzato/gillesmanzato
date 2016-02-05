@@ -6,7 +6,7 @@ body, html {
   transition: opacity 400ms;
 }
 
-body, .onepage-wrapper, html {
+body.onepage-active, .onepage-wrapper, html.onepage-active {
   display: block;
   position: static;
   padding: 0;
@@ -47,7 +47,7 @@ body, .onepage-wrapper, html {
   width: 4px;
   height: 4px;
   display: block;
-  
+
 }
 .onepage-pagination li a:before{
   content: '';

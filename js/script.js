@@ -72,7 +72,7 @@ function onPlayerReady() {
 // Common function
 
 function isReady(){
-  document.getElementById('loader').className = 'hide';
+  document.getElementById('loader').classList.add('hide');
   document.getElementById('fullpage').classList.add('ready');
 }
 
@@ -87,7 +87,7 @@ window.onresize = resize;
 
 
 // Use fullscreen and youtube video only
-if(!md.mobile() && !md.tablet()){
+if(!(md.mobile() || md.tablet())){
   // Init Fullpage
   onePageScroll('#fullpage');
 
@@ -113,7 +113,6 @@ if(!md.mobile() && !md.tablet()){
         rel:0,
         loop: 1,
         enablejsapi : 1,
-        videoQuality: 'hires',
         relatedVideos: 0,
         modestbranding : 0,
         showinfo: 0,
@@ -129,14 +128,15 @@ if(!md.mobile() && !md.tablet()){
 }
 //
 else {
-  var list = document.querySelectorAll('.section');
+  var list = document.querySelectorAll('section');
   fontObserver.check().then(
       function() {
         // JavaScript to execute when fonts start loading
         isReady();
 
         forEach(list, function(index, el){
-          el.classlist.add('active');
+          console.log(el)
+          el.classList.add('active');
         });
       },
       function() {
