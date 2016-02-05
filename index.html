@@ -6,7 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <!-- bower:css -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,100,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="vendor/fullpage.js/jquery.fullPage.css" />
+    <link rel="stylesheet" href="vendor/purejs-onepage-scroll/onepage-scroll.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -18,17 +18,19 @@
         <p>be calm, rewind...</p>
       </div>
     </div>
-    <div id="videoFade"></div>
-    <div id="video"></div>
+    <div id="videoWrapper">
+        <div id="video"></div>
+    </div>
+
     <div id="fullpage">
-      <div class="section">
+      <section>
         <div id="intro" class="wrapper">
           <h1>GILLES MANZATO</h1>
           <p>graphic designer, fullstack developer, videographer</p>
           <p class="baseline">I’m committed to deliver well crafted, robust and perfect work.</p>
         </div>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <div class="wrapper">
           <h2>ABOUT ME</h2>
           <p>31 years, born in Belgium, I have 8 years of corporate experience as a full-time front-end developer in Paris. I had the opportunity to build high-end digital productions for web pioneers such as vente-privee.com, AdopteUnMec.com and for start-ups like ContractLive. I am now a full-stack freelance developer.</p>
@@ -48,27 +50,24 @@
             <li>Sketch</li>
             <li>Photoshop</li>
             <li>Jira</li>
-            <li>SCRUM/Agile</li>
-            <li>Git / Github</li>
+            <li>SCRUM</li>
+            <li>Git</li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
+      <section>
         <div class="wrapper">
             <h1>CONTACT</h1>
             <p>Have a question or want to work together ?</p>
             <p>Get in touch with me by dropping me an e-mail at <strong>gilles.manzato@gmail.com</strong></p>
 
         </div>
-      </div>
+      </section>
     </div>
+
     <!-- bower:js -->
-    <script src="vendor/jquery/dist/jquery.js"></script>
-    <script src="vendor/youtubeBackground/src/jquery.youtubebackground.js"></script>
-    <script src="vendor/fullpage.js/jquery.fullPage.js"></script>
-    <script src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <script src="vendor/purejs-onepage-scroll/onepagescroll.js"></script>
     <script src="vendor/mobile-detect/mobile-detect.js"></script>
     <!-- endbower -->
     <script src="vendor/fontfaceobserver/fontfaceobserver.standalone.js"></script>

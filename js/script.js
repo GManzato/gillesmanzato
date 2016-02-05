@@ -1,59 +1,150 @@
+/*
+Created by Gilles Manzato
+The code is wanted simple and pure javascript, no need of jquery, mvc frameworks or ES2015.
+No need of a bazooka to kill a fly :)
+*/
+
+// Helpers
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
+};
+
+var getWindowWidth = function(){
+  var w=window,
+  d=document,
+  e=d.documentElement,
+  g=d.getElementsByTagName('body')[0];
+  return w.innerWidth||e.clientWidth||g.clientWidth;
+}
+
+var getWindowHeight = function(){
+  var w=window,
+  d=document,
+  e=d.documentElement,
+  g=d.getElementsByTagName('body')[0];
+  return w.innerHeight||e.clientHeight||g.clientHeight;
+}
+
+// Vars
+
+var video;
+
+// background video functions
+
+var resize = function() {
+  var width = getWindowWidth(),
+      pWidth, // player width, to be defined
+      height = getWindowHeight(),
+      pHeight, // player height, tbd
+      video = document.getElementById('video');
+  // when screen aspect ratio differs from video, video must center and underlay one dimension
+  if (width / (16/9) < height) { // if new video height < window height (gap underneath)
+      pWidth = Math.ceil(height * (16/9)); // get new player width
+      video.height = height;
+      video.width = pWidth;
+      video.style.left = (width - pWidth) / 2;
+      video.style.top = 0;
+  } else { // new video width < window width (gap to right)
+      pHeight = Math.ceil(width / (16/9)); // get new player height
+      video.height = pHeight;
+      video.width = width;
+      video.style.left = 0;
+      video.style.top = (height - pHeight) / 2;
+  }
+}
+
+
+function onYouTubePlayerReady(){
+  video = new YT.Player('video', {events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}});
+}
+
+function onPlayerStateChange(data){
+  if(data.data){
+    isReady();
+  }
+}
+function onPlayerReady() {
+  resize();
+}
+
+// Common function
+
+function isReady(){
+  document.getElementById('loader').className = 'hide';
+  document.getElementById('fullpage').classList.add('ready');
+}
+
+// Init
 var md = new MobileDetect(window.navigator.userAgent);
 var fontObserver = new FontFaceObserver('Roboto', {
   weight: 300
 });
 
+// Events
+window.onresize = resize;
 
-$(function(){
-   console.log(md.mobile());
-  // Don't use Fullpage and Background Video when it's a mobile (take too much resources and it's not really usable)
-  if(!md.mobile()){
-    // Init Plugins
-    $('#fullpage').fullpage();
 
-    function addVideoEvents(){
-      var bgVideo = $('#video').data('ytPlayer').player;
-      bgVideo.addEventListener('onStateChange',function(data){
-        if(data.data){
-          isReady();
-        }
-      });
-    }
+// Use fullscreen and youtube video only
+if(!md.mobile() && !md.tablet()){
+  // Init Fullpage
+  onePageScroll('#fullpage');
 
-    $('#video').YTPlayer({
-      fitToBackground: true,
+  // This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video', {
+      width: window.innerWidth,
+      height : '100%',
       videoId: 'Zxol2hYWxrc',
       playerVars: {
-        modestbranding: 0,
+        autoplay: 1,
+        controls: 0 ,
+        mute: true,
+        rel:0,
+        loop: 1,
+        enablejsapi : 1,
+        videoQuality: 'hires',
+        relatedVideos: 0,
+        modestbranding : 0,
         showinfo: 0,
-        branding: 0
+        playlist: 'Zxol2hYWxrc'
+
       },
-      callback: function(){
-        addVideoEvents()
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
       }
     });
-  } else {
-    // For the mobile we just wait that the font are ready !
-    fontObserver.check().then(
+  }
+}
+//
+else {
+  var list = document.querySelectorAll('.section');
+  fontObserver.check().then(
       function() {
         // JavaScript to execute when fonts start loading
-        console.log('font ready');
         isReady();
-        $('.section').addClass('active');
+
+        forEach(list, function(index, el){
+          el.classlist.add('active');
+        });
       },
       function() {
-        console.log('font fail');
-        // JavaScript to execute when fonts become active
-
       }
     );
-  }
+}
 
-  function isReady(){
-    $('#loader').addClass('hide');
-    $('#fullpage').addClass('ready');
 
-  }
-//isReady();
-});
+
+
 

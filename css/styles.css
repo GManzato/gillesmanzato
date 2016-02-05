@@ -58,7 +58,7 @@ body {
   color: #FFF;
   background: #000;
   font-family: "roboto",sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 100;
   text-align: center;
   transition: all .5s ease-in-out ;
@@ -92,10 +92,16 @@ body {
   width: 50%;
   margin : 0 0 20px 0;
 }
-.section {
+section {
   margin-bottom: 300px;
 }
-.ytplayer-container:before{
+#videoWrapper {
+  position: absolute;
+  top:0;
+  bottom: 0;
+
+}
+#videoWrapper:before{
   background: -moz-linear-gradient(left,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
   background: -webkit-linear-gradient(left,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
   background: linear-gradient(to right,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
@@ -155,11 +161,6 @@ p{
   margin-top: 80px;
 }
 
-#video{
- position: relative;
- background: transparent;
-}
-
 .skill-list li {
   display: inline-block;
   border: 1px solid #50E3C2;
@@ -175,12 +176,7 @@ p{
   background: #50E3C2;
 }
 
-.ytplayer-container{
- position: absolute;
- top: 0;
- z-index: -1;
-}
-#fullpage .section .wrapper {
+#fullpage section .wrapper {
   margin-left: 2%;
   margin-right: 2%;
 }
@@ -194,11 +190,13 @@ p{
     width: 30%;
     margin-left: -15%;
   }
-
+  section {
+    margin-bottom: 0;
+  }
   #loader img {
     width: 25%;
   }
-  #fullpage .section .wrapper {
+  #fullpage section .wrapper {
     margin-left: 2%;
     width: 40%;
   }
