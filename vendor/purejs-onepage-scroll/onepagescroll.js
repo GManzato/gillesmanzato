@@ -49,7 +49,7 @@ function onePageScroll(element, options) {
   	el.style.position = "relative";
 
     _addClass(body,"onepage-active");
-
+    _addClass(document.querySelector('html'),"onepage-active")
   	for( var i = 0; i < sections.length; i++){
   	  _addClass(sections[i], "ops-section")
   	  sections[i].dataset.index = i + 1;
