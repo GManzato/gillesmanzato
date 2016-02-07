@@ -105,7 +105,7 @@ if(!(md.mobile() || md.tablet())){
     player = new YT.Player('video', {
       width: window.innerWidth,
       height : '100%',
-      videoId: 'Zxol2hYWxrc',
+      videoId: 'ioqLNhZXwFY',
       playerVars: {
         autoplay: 1,
         controls: 0 ,
@@ -116,7 +116,7 @@ if(!(md.mobile() || md.tablet())){
         relatedVideos: 0,
         modestbranding : 0,
         showinfo: 0,
-        playlist: 'Zxol2hYWxrc'
+        playlist: 'ioqLNhZXwFY'
 
       },
       events: {

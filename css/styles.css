@@ -118,9 +118,8 @@ a:hover {
   transform: rotate(45deg);
   background: #50E3C2;
   padding: 8px 80px;
-}
-#hireme a {
   color: #FFF;
+  font-weight: 300;sub
   text-decoration: none;
 }
 section {
@@ -211,7 +210,7 @@ p{
 }
 
 .social {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 #fullpage section .wrapper {
