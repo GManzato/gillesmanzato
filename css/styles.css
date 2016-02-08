@@ -70,7 +70,7 @@ body {
   background-size: cover;
   font-family: "roboto",sans-serif;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
   transition: all .5s ease-in-out ;
 }
@@ -170,6 +170,7 @@ p{
   margin: 20px auto 0 auto;
   border-top: 1px solid #50E3C2;
 }
+
 .resume {
   text-align: center;
 }
@@ -179,9 +180,18 @@ p{
 .resume a:hover{
   opacity: 1;
 }
-.resume i {
-  font-size: 72px;
+.resume .text {
   display: block;
+}
+.resume .anim {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background: url('../img/resume.png') left center;
+  animation: play 2s steps(13) infinite;
+}
+@keyframes play {
+   100% { background-position: -1300px; }
 }
 
 .ready .active h1,
@@ -277,7 +287,7 @@ p{
     width: 30%;
     margin-left: -15%;
   }
-  #videoWrapper:before{
+  .onepage-active #videoWrapper:before{
     background: -moz-linear-gradient(left,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
     background: linear-gradient(to right,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%);
@@ -300,11 +310,12 @@ p{
   .baseline:before{
     margin-left: 0;
   }
-  .resume {
+  .onepage-active .resume {
     float: left;
   }
   .resume:after {
     clear:both;
+    float: none;
   }
   #videoWrapper {
     position: absolute;
