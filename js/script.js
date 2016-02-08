@@ -61,7 +61,6 @@ function onYouTubePlayerReady(){
 }
 
 function onPlayerStateChange(data){
-  console.log(data.data);
   if(data.data){
     isReady();
   }
@@ -136,7 +135,6 @@ else {
         isReady();
 
         forEach(list, function(index, el){
-          console.log(el)
           el.classList.add('active');
         });
       },
