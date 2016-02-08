@@ -44,13 +44,13 @@ var resize = function() {
       pWidth = Math.ceil(height * (16/9)); // get new player width
       video.height = height;
       video.width = pWidth;
-      video.style.left = (width - pWidth) / 2;
+      video.style.marginLeft = (-(pWidth - width) / 2)+"px";
       video.style.top = 0;
   } else { // new video width < window width (gap to right)
       pHeight = Math.ceil(width / (16/9)); // get new player height
       video.height = pHeight;
       video.width = width;
-      video.style.left = 0;
+      video.style.marginLeft = 0;
       video.style.top = (height - pHeight) / 2;
   }
 }
