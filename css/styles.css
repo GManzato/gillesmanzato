@@ -178,10 +178,6 @@ p{
 }
 .resume {
   text-align: center;
-  float: left;
-}
-.resume:after {
-  clear:both;
 }
 .resume a{
   text-decoration: none;
@@ -309,6 +305,12 @@ p{
   }
   .baseline:before{
     margin-left: 0;
+  }
+  .resume {
+    float: left;
+  }
+  .resume:after {
+    clear:both;
   }
 
 }
