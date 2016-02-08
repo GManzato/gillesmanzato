@@ -74,7 +74,7 @@ body {
   text-align: center;
   transition: all .5s ease-in-out ;
 }
-a,a.visited {
+a,a:visited,a:active {
   color: #50E3C2;
   transition: all .5s ease-in-out;
 }
@@ -155,17 +155,18 @@ h2 {
   margin-bottom: 20px;
   margin-top: 40px;
 }
-.ready .active h1,
-.ready .active h2 {
-  transform: translate(0, 0);
-  opacity: 1;
-}
 
 strong {
   font-weight: 500;
   color: #50E3C2;
 }
-
+p{
+  margin-bottom: 40px;
+  transition: all .5s ease-in-out .3s;
+}
+.active p{
+  margin-bottom: 10px;
+}
 .baseline:before{
   transition: all .5s ease-in-out ;
   content:"";
@@ -175,13 +176,28 @@ strong {
   margin: 20px auto 0 auto;
   border-top: 1px solid #50E3C2;
 }
-
-p{
-  margin-bottom: 40px;
-  transition: all .5s ease-in-out .3s;
+.resume {
+  text-align: center;
+  float: left;
 }
-.active p{
-  margin-bottom: 10px;
+.resume:after {
+  clear:both;
+}
+.resume a{
+  text-decoration: none;
+}
+.resume a:hover{
+  opacity: 1;
+}
+.resume i {
+  font-size: 72px;
+  display: block;
+}
+
+.ready .active h1,
+.ready .active h2 {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 #intro {
@@ -250,6 +266,9 @@ p{
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+
+.icon-github:before { content: '\e800'; } /* '' */
+.icon-arrow-curved:before { content: '\e801'; } /* '' */
 .icon-pinterest:before { content: '\e80d'; } /* '' */
 .icon-facebook:before { content: '\e80e'; } /* '' */
 .icon-twitter:before { content: '\e80f'; } /* '' */
