@@ -61,6 +61,7 @@ function onYouTubePlayerReady(){
 }
 
 function onPlayerStateChange(data){
+  console.log(data.data);
   if(data.data){
     isReady();
   }
